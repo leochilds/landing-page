@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="./w3.css" />
-  </head>
-  <body>
-      <!-- BODY -->
-      <script src="./tests.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="./w3.css" />
+  <style>
+    /* Inline styles as tests couldn't read from external file */
+    #header-img {
+      margin: auto;
+      display: block;
+    }
+
+    .flex-container {
+      display: flex;
+    }
+
+    .nav-link {
+      display: inline-flex;
+    }
+
+    @media (max-width: 700px) {
+      #header-img {
+        height: 45px;
+        margin: 1em auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Acme-corp.png" alt="Acme Corporation Logo"
+      id="header-img" />
+    <nav id="nav-bar" class="w3-bar w3-light-grey w3-border w3-mobile">
+      <div class="w3-container flex-container">
+        <a href="#main" class="nav-link w3-bar-item w3-button">Main</a>
+        <a href="#about" class="nav-link w3-bar-item w3-button">About</a>
+        <a href="#order" class="nav-link w3-bar-item w3-button">Order</a>
+      </div>
+    </nav>
+  </header>
+  <section id="main">
+
+  </section>
+  <section id="about">
+    <iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/1EevEHh58B0" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </section>
+  <section id="order">
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <label for="email" id="email-label">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter email here..." required />
+      <input type="submit" id="submit" />
+    </form>
+  </section>
+  <script src="./tests.js"></script>
+</body>
+
 </html>
